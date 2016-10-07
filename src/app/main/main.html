@@ -1,0 +1,29 @@
+<ng-include src="'app/templates/header.html'"> </ng-include>
+<main>
+  <section class="sec-area" ng-repeat="section in main.sections">
+    <div class="" ng-if="$even">
+      <div class="content-box">
+        <h2 class="section-title">{{ section.title }}</h2>
+        <h3 class="section-subtitle">{{ section.subtitle }}</h3>
+        <p>{{ section.content }}</p>
+        <a href="{{ section.url }}" class="link-more">{{ section.moretext }}</a>
+      </div>
+      <a href="{{ section.url }}" class="feature-img">
+        <img ng-src="assets/images/{{ section.image }}" alt="">
+      </a>
+    </div>
+    <div class="" ng-if="$odd">
+      <a href="{{ section.url }}" class="feature-img">
+        <img ng-src="assets/images/{{ section.image }}" alt="">
+      </a>
+      <div class="content-box">
+        <h2 class="section-title">{{ section.title }}</h2>
+        <h3 class="section-subtitle">{{ section.subtitle }}</h3>
+        <p>{{ section.content }}</p>
+        <a href="{{ section.url }}" class="link-more">{{ section.moretext }}</a>
+      </div>
+    </div>
+  </section>
+</main>
+<ng-include src="'app/templates/footer.html'"> </ng-include>
+

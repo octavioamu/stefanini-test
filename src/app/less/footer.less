@@ -1,0 +1,302 @@
+
+// icons
+[class^='icon'] {
+  width: 16px;
+  height: 16px;
+  display: block;
+  background-image: url(../../assets/images/sprite.png);
+  background-size: 133px 41px;
+
+  .social-btn:hover & {
+    filter: saturate(2);
+  }
+}
+
+.icon {
+  &-rss {
+    background-position: 0 0;
+  }
+  &-fb {
+    background-position: -20px 0;
+  }
+  &-pt {
+    background-position: -40px 0;
+  }
+  &-tw {
+    background-position: -60px 0;
+  }
+  &-gp {
+    background-position: -80px 0;
+  }
+  &-db {
+    background-position: -100px 0;
+  }
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -4px;
+    margin-right: -4px;
+    margin-bottom: 30px;
+
+  .gallery-item {
+    display: inherit;
+    margin: 5px;
+    width: 66px;
+    height: 66px;
+    text-align: center;
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+
+    &:after {
+      content: '+';
+      color: #fff;
+      position: absolute;
+      font-size: 26px;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      vertical-align: middle;
+      width: 26px;
+      height: 26px;
+      line-height: 1;
+      opacity: 0;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      background-color: fadeout(@ft-hover, 50%);
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      transform: scale(0);
+      transition: all .2s ease-in-out;
+    }
+
+
+    &:hover:after,
+    &:hover:before {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+  }
+}
+
+.list-links {
+  list-style: square;
+  color: @ft-hover;
+  padding-left: 17px;
+
+  li {
+    border-bottom: 1px solid @ft-line;
+
+    &:hover {
+      color: @orange;
+    }
+  }
+
+  a {
+    color: @ft-text;
+    text-decoration: none;
+    padding: 10px 0;
+    display: block;
+
+    &:hover {
+      color: @ft-hover;
+    }
+  }
+}
+.main-footer{
+  color: @grey;
+  font-size: 14px;
+}
+
+.sub-footer {
+  font-size: 12px;
+
+  a {
+    color: @light-grey;
+    margin: 0 10px;
+    text-decoration: none;
+
+    &:hover {
+      color: @orange;
+    }
+  }
+}
+
+.ft-title {
+  color: #fff;
+  display: block;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-family: @raleway;
+}
+
+.social-icons {
+  margin-top: 30px;
+}
+
+.ft-logo {
+  width: 133px;
+  height: 21px;
+  margin-bottom: 20px;
+  display: block;
+  background-image: url(../../assets/images/sprite.png);
+  background-size: 133px 41px;
+  background-position: 0 -20px;
+}
+
+.tags-widget {
+  margin-bottom: 30px;
+}
+
+.tag {
+  display: inline-block;
+  margin: 4px 2px;
+  color: @light-grey;
+  border: 1px solid @light-grey;
+  padding: 5px;
+  font-size: 12px;
+  text-decoration: none;
+  transition:  all .2s ease-in-out;
+
+  &:hover {
+    color: #fff;
+    background-color: @blue;
+    border-color: @blue;
+  }
+}
+
+.about {
+  color: @grey;
+  // font-size: 12px;
+}
+
+.post {
+  padding-bottom: 10px;
+  border-bottom: 1px solid @ft-line;
+
+  + .post {
+    margin-top: 10px;
+  }
+
+  img {
+    display: inline-block;
+    width: 16%;
+    margin-right: 2%;
+  }
+
+  a {
+    text-decoration: none;
+    color: @light-grey;
+    font-weight: 600;
+
+    &:hover {
+      color: #fff;
+    }
+
+  }
+  p {
+    margin: 5px 0;
+  }
+
+  time {
+    color: @light-grey;
+    font-size: 12px;
+  }
+}
+.post-content {
+  display: inline-block;
+    width: 80%;
+    vertical-align: top;
+}
+
+.social-btn {
+  color: @light-grey;
+  display: block;
+  text-decoration: none;
+  margin-bottom: 15px;
+
+  &:hover {
+    color: #fff;
+  }
+
+  > span,
+  > i {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  > span {
+    margin-left: 5px;
+    font-weight: 600;
+    font-size: 12px;
+  }
+
+
+  small {
+    display: block;
+    font-weight: 400;
+    margin-top: 2px;
+  }
+}
+
+.form-newsletter {
+
+  input {
+    color: #fff;
+    background-color: #222533;
+    border: 1px solid #243240;
+    height: 32px;
+    display: inline-block;
+    width: 85%;
+    padding: 5px 10px;
+  }
+
+  button {
+    color: #fff;
+    background-color: @blue;
+    border: none;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+  }
+}
+.ft-link-more {
+  text-decoration: none;
+  color: @light-grey;
+
+  &:hover {
+    color: #fff;
+
+    .arrow {
+      color: #fff;
+      background-color: @blue;
+    }
+  }
+}
+
+.arrow {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 50px;
+  background-color: @light-grey;
+  font-style: normal;
+  color: @ft-bg;
+  text-align: center;
+  line-height: 14px;
+  font-size: 10px;
+}

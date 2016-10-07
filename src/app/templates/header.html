@@ -1,0 +1,8 @@
+<header class="main-header">
+  <nav>
+    <a href="{{link.url}}" ng-repeat-start="link in main.menu">
+      {{link.item}}
+    </a>
+  <a href="/" ng-repeat-end ng-if="$middle && 0 === ($index + 1) % 4" class="logo"> <img src="assets/images/logo.png" alt="Logo PSD"></a>
+  </nav>
+</header>

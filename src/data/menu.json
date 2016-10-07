@@ -1,0 +1,34 @@
+[
+  {
+    "item": "home",
+    "url": "#home"
+  },
+  {
+    "item": "about",
+    "url": "#about"
+  },
+  {
+    "item": "services",
+    "url": "#services"
+  },
+  {
+    "item": "portfolio",
+    "url": "#portfolio"
+  },
+  {
+    "item": "team",
+    "url": "#team"
+  },
+  {
+    "item": "shop",
+    "url": "#shop"
+  },
+  {
+    "item": "blog",
+    "url": "#blog"
+  },
+  {
+    "item": "contacts",
+    "url": "#contacts"
+  }
+]
